@@ -103,6 +103,8 @@ import SwipeButton from 'rn-swipe-button';
        PropTypes.string,
        PropTypes.number,
     ]),
+    <b>isLoading</b>: PropTypes.bool, <span style="color: blueviolet">// When set to true, displays a loading text in the rail fill area</span>
+    <b>loadingText</b>: PropTypes.string, <span style="color: blueviolet">// The text to display in the rail fill during loading state</span>
     <b>onSwipeFail</b>: PropTypes.func,
     <b>onSwipeStart</b>: PropTypes.func,
     <b>onSwipeSuccess</b>: PropTypes.func, // Returns a boolean to indicate the swipe completed with real gesture or forceCompleteSwipe was called
@@ -114,6 +116,7 @@ import SwipeButton from 'rn-swipe-button';
     <b>resetAfterSuccessAnimDelay</b>: PropTypes.number, <span style="color: blueviolet">// This is delay before resetting the button after successful swipe When shouldResetAfterSuccess = true </span>
     <b>screenReaderEnabled</b>: PropTypes.bool, <span style="color: blueviolet">// Overrides the internal value </span>
     <b>shouldResetAfterSuccess</b>: PropTypes.bool, <span style="color: blueviolet">// If set to true, buttun resets automatically after swipe success with default delay of 1000ms</span>
+    <b>successText</b>: PropTypes.string, <span style="color: blueviolet">// The text to display in the rail fill after successful swipe</span>
     <b>swipeSuccessThreshold</b>: PropTypes.number, <span style="color: blueviolet">// Ex: 70. Swipping 70% will be considered as successful swipe</span>
     <b>thumbIconBackgroundColor</b>: PropTypes.string,
     <b>thumbIconBorderColor</b>: PropTypes.string,
@@ -216,3 +219,64 @@ function Example() {
 
 ## Contributing
 I request more developers from the open-source community to contributing to improve this project. You can find the work by visiting the [project](https://github.com/users/UdaySravanK/projects/1) associated with this repository. You can find issues related to defects, new feature requests and dev only related tasks like writing unit tests. 
+
+<hr>
+<h2 style="color:darkgreen;">New Features</h2>
+
+### Loading and Success States
+
+The RNSwipeButton now supports loading and success states with customizable text:
+
+1. **Loading State**: Set `isLoading={true}` to display a loading state in the rail fill area. You can customize the text with `loadingText` prop.
+2. **Success State**: After a successful swipe, a success message can be displayed using the `successText` prop.
+3. **Reset**: Use the `forceReset` function to reset the button to its initial state after loading or success states.
+
+#### Example with Loading and Success States
+
+```js
+import React, { useState, useCallback, useRef } from 'react';
+import { View } from 'react-native';
+import SwipeButton from 'rn-swipe-button';
+
+function LoadingExample() {
+  const [isLoading, setIsLoading] = useState(false);
+  let forceResetLastButton = useRef(null);
+  
+  const handleSwipeSuccess = useCallback((isForceComplete) => {
+    // Start loading
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsLoading(false);
+      
+      // Auto reset after 2 seconds of showing success
+      setTimeout(() => {
+        if (forceResetLastButton.current) {
+          forceResetLastButton.current();
+        }
+      }, 2000);
+    }, 1500);
+  }, []);
+  
+  return (
+    <View>
+      <SwipeButton
+        title="Swipe to submit"
+        onSwipeSuccess={handleSwipeSuccess}
+        forceReset={(reset) => {
+          forceResetLastButton.current = reset;
+        }}
+        isLoading={isLoading}
+        loadingText="Processing payment..."
+        successText="Payment Successful!"
+        thumbIconBackgroundColor="#FFFFFF"
+        railFillBackgroundColor="#4CAF50"
+        railBackgroundColor="#E0E0E0"
+      />
+    </View>
+  );
+}
+```
+
+This feature is particularly useful for integrating with asynchronous operations like API calls, where you can show a loading state during the request and a success state after completion.

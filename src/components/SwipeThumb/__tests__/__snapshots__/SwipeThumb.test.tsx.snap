@@ -19,13 +19,12 @@ exports[`SwipeThumb Component should render correctly with default props 1`] = `
   style={
     {
       "alignItems": "flex-end",
-      "alignSelf": "flex-start",
       "backgroundColor": "#00000000",
       "borderColor": "#00000000",
-      "borderRadius": 50,
-      "borderRightWidth": 0,
-      "borderWidth": 3,
-      "margin": 1,
+      "borderWidth": 2,
+      "justifyContent": "center",
+      "margin": 2,
+      "overflow": "hidden",
       "width": 50,
     }
   }
@@ -36,10 +35,8 @@ exports[`SwipeThumb Component should render correctly with default props 1`] = `
       [
         {
           "alignItems": "center",
-          "borderRadius": 50,
           "borderWidth": 2,
           "justifyContent": "center",
-          "marginVertical": -3,
         },
         {
           "backgroundColor": "#D27030",

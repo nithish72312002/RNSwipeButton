@@ -1,33 +1,42 @@
 import { StyleSheet } from "react-native";
 
-const borderWidth = 3;
-const margin = 1;
+export const borderWidth = 2;
+export const margin = 2;
 const maxContainerHeight = 100;
-const Styles = StyleSheet.create({
+
+export default StyleSheet.create({
   container: {
-    alignItems: "flex-end",
-    alignSelf: "flex-start",
-    borderRadius: maxContainerHeight / 2,
-    borderRightWidth: 0,
     borderWidth,
     margin,
+    overflow: "hidden",
+    alignItems: "flex-end",
+    justifyContent: "center",
   },
   containerRTL: {
-    alignItems: "flex-start",
-    alignSelf: "flex-end",
-    borderRadius: maxContainerHeight / 2,
-    borderLeftWidth: 0,
     borderWidth,
     margin,
+    overflow: "hidden",
+    alignItems: "flex-start",
+    justifyContent: "center",
   },
   icon: {
     alignItems: "center",
-    borderRadius: maxContainerHeight / 2,
-    borderWidth: 2,
+    borderWidth,
     justifyContent: "center",
-    marginVertical: -borderWidth,
+  },
+  railFillTextContainer: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100%",
+    paddingHorizontal: 10,
+    zIndex: 1,
+  },
+  railFillText: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
-
-export default Styles;
-export { borderWidth, margin };

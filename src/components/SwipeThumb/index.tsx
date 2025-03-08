@@ -15,6 +15,7 @@ import {
   ViewStyle,
   ImageSourcePropType,
   PanResponderGestureState,
+  Text,
 } from "react-native";
 
 // Styles
@@ -37,7 +38,9 @@ interface SwipeThumbProps {
   finishRemainingSwipeAnimationDuration?: number;
   forceCompleteSwipe?: (forceComplete: () => void) => void;
   forceReset?: (forceReset: () => void) => void;
+  isLoading?: boolean;
   layoutWidth?: number;
+  loadingText?: string;
   onSwipeFail?: () => void;
   onSwipeStart?: () => void;
   onSwipeSuccess?: (isForceComplete: boolean) => void;
@@ -46,6 +49,7 @@ interface SwipeThumbProps {
   railStyles?: ViewStyle;
   resetAfterSuccessAnimDelay?: number;
   shouldResetAfterSuccess?: boolean;
+  successText?: string;
   swipeSuccessThreshold?: number;
   thumbIconBackgroundColor?: string;
   thumbIconBorderColor?: string;
@@ -66,7 +70,9 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
     finishRemainingSwipeAnimationDuration = DEFAULT_ANIMATION_DURATION,
     forceCompleteSwipe,
     forceReset,
+    isLoading = false,
     layoutWidth = 0,
+    loadingText = "Loading...",
     onSwipeFail,
     onSwipeStart,
     onSwipeSuccess,
@@ -75,6 +81,7 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
     railStyles,
     resetAfterSuccessAnimDelay,
     shouldResetAfterSuccess,
+    successText = "Success!",
     swipeSuccessThreshold,
     thumbIconBackgroundColor,
     thumbIconBorderColor,
@@ -102,6 +109,8 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
 
   const [backgroundColor, setBackgroundColor] = useState(TRANSPARENT_COLOR);
   const [borderColor, setBorderColor] = useState(TRANSPARENT_COLOR);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [swipeProgress, setSwipeProgress] = useState(0);
 
   useEffect(() => {
     forceReset && forceReset(reset);
@@ -110,6 +119,18 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
   useEffect(() => {
     forceCompleteSwipe && forceCompleteSwipe(forceComplete);
   }, [forceCompleteSwipe]);
+
+  useEffect(() => {
+    const listener = animatedWidth.addListener(({ value }) => {
+      const progress =
+        (value - defaultContainerWidth) / (maxWidth - defaultContainerWidth);
+      setSwipeProgress(Math.max(0, Math.min(1, progress)));
+    });
+
+    return () => {
+      animatedWidth.removeListener(listener);
+    };
+  }, [animatedWidth, defaultContainerWidth, maxWidth]);
 
   function updateWidthWithAnimation(newWidth: number) {
     Animated.timing(animatedWidth, {
@@ -229,11 +250,13 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
 
   function invokeOnSwipeSuccess(isForceComplete: boolean) {
     disableTouch(disableResetOnTap);
+    setIsSuccess(true);
     onSwipeSuccess && onSwipeSuccess(isForceComplete);
   }
 
   function reset() {
     disableTouch(false);
+    setIsSuccess(false);
     updateWidthWithAnimation(defaultContainerWidth);
   }
 
@@ -314,6 +337,14 @@ const SwipeThumb: React.FC<SwipeThumbProps> = React.memo((props) => {
       pointerEvents={shouldDisableTouch ? "none" : "auto"}
       testID="SwipeThumb"
     >
+      {/* Rail fill status text */}
+      {(isLoading || isSuccess) && swipeProgress > 0.2 && (
+        <View style={styles.railFillTextContainer}>
+          <Text style={styles.railFillText}>
+            {isLoading ? loadingText : isSuccess ? successText : ""}
+          </Text>
+        </View>
+      )}
       {renderThumbIcon()}
     </Animated.View>
   );

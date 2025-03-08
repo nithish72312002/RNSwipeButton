@@ -49,6 +49,8 @@ interface SwipeButtonProps extends TouchableOpacityProps {
   forceCompleteSwipe?: (forceComplete: () => void) => void;
   forceReset?: (forceReset: () => void) => void;
   height?: number;
+  isLoading?: boolean;
+  loadingText?: string;
   onSwipeFail?: () => void;
   onSwipeStart?: () => void;
   onSwipeSuccess?: (isForceComplete: boolean) => void;
@@ -60,6 +62,7 @@ interface SwipeButtonProps extends TouchableOpacityProps {
   resetAfterSuccessAnimDelay?: number;
   screenReaderEnabled?: boolean;
   shouldResetAfterSuccess?: boolean;
+  successText?: string;
   swipeSuccessThreshold?: number;
   thumbIconBackgroundColor?: string;
   thumbIconBorderColor?: string;
@@ -97,6 +100,8 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({
   forceCompleteSwipe,
   forceReset,
   height = DEFAULT_HEIGHT,
+  isLoading = false,
+  loadingText = "Loading...",
   onSwipeFail,
   onSwipeStart,
   onSwipeSuccess,
@@ -108,6 +113,7 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({
   resetAfterSuccessAnimDelay,
   screenReaderEnabled,
   shouldResetAfterSuccess,
+  successText = "Success!",
   swipeSuccessThreshold = SWIPE_SUCCESS_THRESHOLD,
   thumbIconBackgroundColor = THUMB_ICON_BACKGROUND_COLOR,
   thumbIconBorderColor = THUMB_ICON_BORDER_COLOR,
@@ -272,7 +278,9 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({
           }
           forceCompleteSwipe={forceCompleteSwipe}
           forceReset={forceReset}
+          isLoading={isLoading}
           layoutWidth={layoutWidth}
+          loadingText={loadingText}
           onSwipeFail={onSwipeFail}
           onSwipeStart={onSwipeStart}
           onSwipeSuccess={onSwipeSuccess}
@@ -281,6 +289,7 @@ const SwipeButton: React.FC<SwipeButtonProps> = ({
           railStyles={railStyles}
           resetAfterSuccessAnimDelay={resetAfterSuccessAnimDelay}
           shouldResetAfterSuccess={shouldResetAfterSuccess}
+          successText={successText}
           swipeSuccessThreshold={swipeSuccessThreshold}
           thumbIconBackgroundColor={thumbIconBackgroundColor}
           thumbIconBorderColor={thumbIconBorderColor}

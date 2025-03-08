@@ -82,13 +82,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props Thumb icon customm sty
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -99,10 +98,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props Thumb icon customm sty
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -202,13 +199,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should apply thumbIcon
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 28,
       }
     }
@@ -219,10 +215,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should apply thumbIcon
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -323,13 +317,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should be able to chan
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -340,10 +333,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should be able to chan
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -442,13 +433,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -459,10 +449,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -561,13 +549,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 126,
       }
     }
@@ -578,10 +565,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -680,13 +665,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -697,10 +681,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -799,13 +781,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
         "borderWidth": 20,
-        "margin": 1,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -816,10 +797,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -918,13 +897,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
         "borderWidth": 20,
-        "margin": 1,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -935,10 +913,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1038,13 +1014,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1055,10 +1030,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1157,13 +1130,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1174,10 +1146,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1276,13 +1246,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1293,10 +1262,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1395,13 +1362,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1412,10 +1378,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render correctl
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1514,13 +1478,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cor
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1531,10 +1494,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cor
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D3D3D3",
@@ -1633,13 +1594,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cus
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1650,10 +1610,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cus
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",
@@ -1752,13 +1710,12 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cus
     style={
       {
         "alignItems": "flex-end",
-        "alignSelf": "flex-start",
         "backgroundColor": "#00000000",
         "borderColor": "#00000000",
-        "borderRadius": 50,
-        "borderRightWidth": 0,
-        "borderWidth": 3,
-        "margin": 1,
+        "borderWidth": 2,
+        "justifyContent": "center",
+        "margin": 2,
+        "overflow": "hidden",
         "width": 50,
       }
     }
@@ -1769,10 +1726,8 @@ exports[`Component: SwipeButton UI Rendering Tree & Props should render with cus
         [
           {
             "alignItems": "center",
-            "borderRadius": 50,
             "borderWidth": 2,
             "justifyContent": "center",
-            "marginVertical": -3,
           },
           {
             "backgroundColor": "#D27030",

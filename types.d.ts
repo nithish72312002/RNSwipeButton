@@ -36,6 +36,14 @@ interface Props {
      * Default value is 50
      */
     height?: number;
+    /**
+     * When set to true, a loading state is shown in the railfill
+     */
+    isLoading?: boolean;
+    /**
+     * The text to display when in loading state
+     */
+    loadingText?: string;
     onSwipeFail?: () => void;
     onSwipeStart?: () => void;
     /**
@@ -57,6 +65,10 @@ interface Props {
      */
     screenReaderEnabled?: boolean;
     shouldResetAfterSuccess?: boolean;
+    /**
+     * The text to display when swipe is successful
+     */
+    successText?: string;
     /**
      * If you set it to 50, it means after swiping 50%, the remaining will be auto completed.
      *
